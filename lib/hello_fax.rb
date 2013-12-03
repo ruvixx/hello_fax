@@ -25,7 +25,7 @@ module HelloFax
     end
 
     def update_account_details(options)
-      self.class.put("/Accounts/#{@guid}", :query => options)
+      self.class.post("/Accounts/#{@guid}", :query => options)
     end
 
     def transmissions
